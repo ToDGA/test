@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         body {
+        body {
             padding: 100px 200px;
         }
+
         .circle {
             margin-top: 20px;
             height: 50px;
@@ -18,19 +20,27 @@
             border-radius: 50%;
             background-color: red;
             padding: 20px;
-            box-shadow: -4px 9px 10px rgba(0, 0, 0,0.4);
-            margin:40px;
+            box-shadow: -4px 9px 10px rgba(0, 0, 0, 0.4);
+            margin: 40px;
         }
-        
     </style>
     <script>
+
+        
+        thought = n;
+
         function setName(n) {
-             document.getElementById('generatedHTML').innerHTML = `<div class="circle"> <b> ${n} </b> </div>`;
+            let thought = document.getElementById('input_thought').value;
+            document.getElementById('generatedHTML').innerHTML = `<div class="circle"> <b> ${thought} </b> </div>`;
         }
     </script>
 </head>
+
 <body>
+    <h1>This ai-powered mindreading software shows you what you think about the most</h1>
     <div id="generatedHTML"></div>
-    <button onclick="setName('Detjona')">DETJONA</button>
+    <input id="input_thought" placeholder="first name">Enter your name
+    <button onclick="setName()">Mindreading</button>
 </body>
-</html> 
+
+</html>
