@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            padding: 100px 200px;
+        }
+        .circle {
+            margin-top: 20px;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: red;
+            padding: 20px;
+            box-shadow: -4px 9px 10px rgba(0, 0, 0,0.4);
+            margin:40px;
+        }
+        
+    </style>
+    <script>
+        function setName(n) {
+             document.getElementById('generatedHTML').innerHTML = `<div class="circle"> <b> ${n} </b> </div>`;
+        }
+    </script>
+</head>
+<body>
+    <div id="generatedHTML"></div>
+    <button onclick="setName('Detjona')">DETJONA</button>
+</body>
+</html> 
